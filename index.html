@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <!-- Enable responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import Font Awesome icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Speed Type</title>
+  </head>
+  <body>
+    <!-- Create settings button with Font Awesome cog icon -->
+    <button id="settings-btn" class="settings-btn">
+      <i class="fas fa-cog"></i>
+    </button>
+    <!-- Create settings container with form for difficulty level selection -->
+    <div class="settings" id="settings">
+      <form id="settings-form">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="container">
+      <!-- Create heading for game title -->
+      <h2>Speed Type</h2>
+      <!-- Create subheading for instruction to type a word -->
+      <small>Type the following:</small>
+      <!-- Display the words to type -->
+      <h1 id="word"></h1>
+      <!-- Create input field for user to type the word -->
+      <input
+        type="text"
+        id="text"
+        autocomplete="off"
+        placeholder="Type the word here..."
+      />
+      <!-- Display the remaining time -->
+      <p class="time-container">Time left: <span id="time">10s</span></p>
+      <!-- Display the user's score -->
+      <p class="score-container">Score: <span id="score">0</span></p>
+      <!-- Display end-of-game message -->
+      <div id="end-game-container" class="end-game-container"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
